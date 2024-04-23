@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Guessing Game</title>
+</head>
+<body>
+    <div class="overlay" id="overlay">
+        <h1>You Win!!</h1> <br> <br>
+        <button onclick="reload()">New Game</button> <br>
+        <button onclick="back()">Main Menu</button>
+    </div> <!-- Add overlay div -->
+    <div class="container" id="container">
+        <h1>Guess Number Game</h1> <br>
+        <input id="input" type="number"><br><br>
+        <button onclick="Check()">Check</button><br><br>
+        <button onclick="reload()">New Game</button><br><br>
+        <p id="result">Unknown</p>
+    </div>
+
+    <script src="eel.js"></script>
+    <script>
+        function Check() {
+            var overlay = document.getElementById("overlay");
+
+            var input = document.getElementById("input").value;
+            if(input == ""){
+                document.getElementById("result").innerText = "Please Enter Number";
+            } else {
+                eel.CheckNumber(input)(function(result) {
+                    document.getElementById("result").innerText = result;
+                    if(result == "You Win!"){
+                        overlay.classList.add("show-flex");
+                        document.getElementById("container").classList.add("blur");
+                    }
+                });
+            }
+        }
+        function reload(){
+            var overlay = document.getElementById("overlay");
+            eel.restart()();
+            document.getElementById("result").innerText = "Unknown";
+            overlay.classList.remove("show-flex")
+            document.getElementById("container").classList.remove("blur");
+        }
+        function back(){
+            window.location.href = "index.html"
+        }
+    </script>
+</body>
+</html>

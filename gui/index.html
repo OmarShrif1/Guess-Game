@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Guess Number Game</h1> <br>
+        <label style="font-weight: bold;">Start From: </label> <input placeholder="Please Enter Number" required type="number" id="firstnum"> <br>
+        <label style="font-weight: bold;">To: </label> <input placeholder="Please Enter Number" required type="number" id="secondnum"> <br>
+        <button onclick="Start()" style="cursor: pointer;">Start</button>
+        <p id="stats"></p>
+    </div>
+
+    <script src="eel.js"></script>
+    <script>
+        function Start(){
+            var FirstNum = document.getElementById("firstnum").value;
+            var SecondNum = document.getElementById("secondnum").value;
+            var stats = document.getElementById("stats");
+            if (FirstNum != ""){
+                if (SecondNum != ""){
+                    eel.start(FirstNum,SecondNum)();
+                    window.location.href = "game.html";
+                }else{
+                    stats.innerHTML = "Please Enter Number"
+                }
+            }else{
+                stats.innerHTML = "Please Enter Number"
+            }
+        }
+    </script>
+</body>
+</html>

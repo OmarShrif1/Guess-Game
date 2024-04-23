@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+body {
+    /* Ensure the body fills the viewport */
+    margin: 0;
+    /* Position the body relative to contain absolutely positioned elements */
+    position: relative;
+    color: white;
+    font-family: sans-serif;
+}
+.container {
+    /* Ensure the container fills the viewport */
+    height: 100vh;
+    /* Center content vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Other styles for the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container:before {
+    /* Create a pseudo-element to act as the background */
+    content: '';
+    /* Position the pseudo-element absolutely to cover the container */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* Apply the gradient background to the pseudo-element */
+    background-image: linear-gradient(to bottom, #3094d6, #e91e63, #9b59b6);
+    /* Apply the blur effect to the pseudo-element */
+    filter: blur(5px);
+    /* Ensure the pseudo-element appears behind the container's content */
+    z-index: -1;
+}
+input{
+    height: 20px;
+    width: 200px;
+}
+button {
+    width: 120px;
+    height: 45px;
+    color: white;
+    font-weight: 700;
+    border: 1px white solid;
+    background: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: sans-serif;
+    outline: none;
+    transition: width 0.5s, height 0.5s; /* Specify properties to transition */
+}
+
+button:hover {
+    width: 130px;
+    height: 55px;
+}
