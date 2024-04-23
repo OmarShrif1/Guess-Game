@@ -1,5 +1,6 @@
-**-- Require libraries Is Random And Eel --**
-**-- Type ```pip install random``` For Install Random librarie And Type ```pip install eel``` For Install Eel librarie**
+**-- Require libraries Is Random And Eel --** <br>
+**-- Type ```pip install random``` For Install Random librarie And Type ```pip install eel``` For Install Eel librarie** <br>
+**-- Finally Run ```main.py``` For Run The App--** 
 Its Guess Game😁
 
 Type Your Start Number ☝️ and End Number 👇
